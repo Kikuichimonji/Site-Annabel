@@ -1,27 +1,30 @@
 *{
     box-sizing: border-box; /* force la taille de la box sans padding margin */
 }
-html{
+html
+{
     scroll-behavior: smooth;
-  }
-  
-body{
+}
+body
+{
     margin:0;
     font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
     --orange: #f05f40;
     --bleu: #12a09c;
 }
-#wrops{
+#wrops
+{
     margin: auto;
- 
 }
-a{
+a
+{
     text-decoration: none;
 }
-a[href^=tel] {
+a[href^=tel]
+{
     text-decoration:inherit;
     color: inherit;
- }
+}
 .text-uppercase
 {
     text-transform: uppercase;
@@ -36,7 +39,7 @@ hr.white{
     border: 2px solid white;
 }
 h2{
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 /* 
 ///////////////////
@@ -54,7 +57,7 @@ nav{
     z-index: 10;
 }
 #nav-box{
-    width:80%;
+    width:90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -67,10 +70,20 @@ nav{
 .color:hover{
     color:var(--orange);
 }
-nav span{
+.orange
+{
+    color:var(--orange);
+}
+#navLeft
+{
     margin-top : 1em;
     margin-bottom: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+    justify-content: space-between;
 }
+
 nav a{
     color: black;
     font-weight:700;
@@ -117,17 +130,43 @@ nav a{
     background-color: black;
 }
 
-@media all and (max-width: 1400px){
+@media all and (max-width: 1500px){
     #nav-box{
         width:100%;
         padding-left: 2em;
     }
 }
-@media all and (max-width: 1100px){
+@media all and (max-width:1400px)
+{
     #nav-box{
-       justify-content: space-evenly;
+        padding-left: 1em;
     }
-    #nav2{
+    #navLeft span
+    {
+        margin-left : 0.5em;
+    }
+    #navLeft
+    {
+        justify-content: start;
+        width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
+    }
+}
+@media all and (max-width:1300px)
+{
+    #navLeft
+    {
+        flex-flow: column wrap;
+    }
+}
+@media all and (max-width: 1100px){
+    #nav-box
+    {
+        justify-content: space-evenly;
+    }
+    #nav2
+    {
         width:500px;
         justify-content: center;
     }

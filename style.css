@@ -9,7 +9,7 @@ body{
     margin:0;
     font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
     --orange: #f05f40;
-    --bleu: #12a09c
+    --bleu: #12a09c;
 }
 #wrops{
     margin: auto;
@@ -84,6 +84,7 @@ nav a{
 }
 .mainBurger{
     position: fixed;
+    right:0;
     transform : scaleY(1);
     transform-origin: top;
     transition : transform 0.4s;
@@ -180,19 +181,26 @@ header{
 }
 /* 
 ///////////////////
-PORTFOLIO
+IMAGE
 ///////////////////
 */
 #portfolio{
-   display:flex;
-   flex-wrap: wrap;
-   align-content: center;
-   max-height: 800px;
-   overflow:hidden;
-   position: relative;
-}
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    max-height: 800px;
+    overflow:hidden;
+    position: relative;
+    max-width: 2000px;
+    margin: auto;
+ }
 #portfolio img{
     width:100%;
+    align-self: center;
  }
 #portfolio div{
     position: absolute;
@@ -332,6 +340,8 @@ DEROULEMENT
 }
 #deroul-box #liste-deroul .rowrow img,.rowrow2 img{
     align-self: center;
+    width:400px;
+
 }
 #deroul-box #liste-deroul .rowrow2
 {

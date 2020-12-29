@@ -4,6 +4,7 @@ var closelegal = document.getElementById("close-legal");
 var burger = document.getElementById("burger");
 var burgernav = document.getElementsByClassName("mainBurger")[0];
 var images = document.getElementById("diapo");
+var lieu = document.getElementById("head-box").parentNode.id;
 var next = document.getElementById("next");
 var prev = document.getElementById("previous");
 var count = 1;
@@ -42,5 +43,5 @@ function diapo(n)
             count=1;
         if(count ==0)
             count=4;
-        images.src = "img/liste"+count+".jpg";
+        images.src = "img/"+lieu+"/cabinet"+count+".jpg";
 }

@@ -11,6 +11,7 @@ body
     font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
     --orange: #f05f40;
     --bleu: #12a09c;
+    --NoirBleu : #415164;
 }
 #wrops
 {
@@ -38,9 +39,21 @@ hr{
 hr.white{
     border: 2px solid white;
 }
+hr.noirBleu{
+    border: 2px solid var(--noirBleu);
+}
 h2{
     font-size: 1.5em;
 }
+.gras
+{
+    font-weight: bold;
+}
+.noirBleu
+{
+    color:var(--NoirBleu);
+}
+
 /* 
 ///////////////////
 NAVIGATION BAR 
@@ -196,7 +209,6 @@ HEADER
 ///////////////////
 */
 header{
-    background-image: url("img/header.jpg");
 	background-position:center center;
     background-size:cover;
     color:var(--orange);
@@ -207,11 +219,23 @@ header{
     z-index: 1;
     font-size: 1.5em;
 }
+header#colmar
+{
+    background-image: url("img/header1.jpg");
+}
+header#kunheim
+{
+    background-image: url("img/header.jpg");
+}
 #head-box{
     margin: auto;
     text-align: center;
     background-color: rgba(255,255,255,0.7);
     padding: 1em;
+}
+.h3Head{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 @media all and (max-width: 700px){
     header{
@@ -236,10 +260,12 @@ IMAGE
     position: relative;
     max-width: 2000px;
     margin: auto;
+    background-color: lightgrey;
  }
 #portfolio img{
     width:100%;
     align-self: center;
+  
  }
 #portfolio div{
     position: absolute;
@@ -273,7 +299,7 @@ A QUI SONT ADRESSEE LES SCEANCES / PROPOS
     margin: auto;
 }
 #propos-box strong{
-    text-decoration: underline;
+    color:var(--NoirBleu)
 }
 #propos-box p {
     padding-bottom: 2em;
@@ -351,9 +377,13 @@ DEROULEMENT
     padding-bottom: 5em;
     padding-top: 5em;
 }
-#deroul-box h1,hr
+#deroul-box h1
 {
     margin-bottom: 0;
+}
+#deroul-box hr
+{
+    margin-bottom: 2em;
 }
 #deroul-box h3
 {
@@ -411,6 +441,9 @@ DEROULEMENT
 #deroul-box #pend{
     padding-top: 2em;
 }
+#deroul-box img{
+    filter:grayscale(100%);
+}
 @media all and (max-width: 950px){
     #deroul-box #liste-deroul
     {
@@ -428,11 +461,11 @@ DEROULEMENT
         width: 100%;
     }
     #deroul-box #liste-deroul .rowrow img,.rowrow2 img{
-       align-self: initial;
-       width:100%
+        align-self: initial;
+        width:100%
     }
     #deroul-box #liste-deroul .colcol{
-       width:100%;
+        width:100%;
     }
 }
 @media all and (max-width: 350px){
@@ -449,6 +482,97 @@ DEROULEMENT
     }
 }
 
+/* 
+///////////////////
+OSTEO
+///////////////////
+*/
+#osteo-box
+{
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+#osteo-box h1,hr
+{
+    margin-bottom: 0;
+}
+#osteo-box h2
+{
+    margin-bottom: 2em;
+}
+#osteo-box div
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+#osteo-box div img
+{
+    width: 20%;
+    filter:grayscale(100%);
+
+}
+#osteo-box div p
+{
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: justify;
+}
+
+/* 
+///////////////////
+LOCATION
+///////////////////
+*/
+#location
+{
+    background-color: var(--bleu);
+    color: white;
+    text-align: center;
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+#location-box
+{
+    width: 80%;
+    margin: auto;
+}
+#location-box h1,hr
+{
+    margin-bottom: 0;
+}
+#location-box h2
+{
+    margin-bottom: 2em;
+}
+#location-box div 
+{
+    text-align: left;
+}
+#location-box div img
+{
+    width: 100%;
+}
+#location-box span.gras
+{
+    margin-right: 5em;
+}
+.flexRow
+{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2em;
+}
+.flexRow .gras
+{
+    padding-right: 2em;
+}
 /* 
 ///////////////////
 CONTACT

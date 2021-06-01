@@ -93,7 +93,7 @@ nav{
     margin-bottom: 1em;
     display: flex;
     flex-flow: row wrap;
-    width: 40%;
+    width: 20%;
     justify-content: space-between;
 }
 
@@ -173,7 +173,7 @@ nav a{
         flex-flow: column wrap;
     }
 }
-@media all and (max-width: 1100px){
+@media all and (max-width: 1200px){
     #nav-box
     {
         justify-content: space-evenly;

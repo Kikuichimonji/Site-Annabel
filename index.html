@@ -8,7 +8,8 @@
     <meta name="robots" content="index">
     <link href="autres/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel="stylesheet"  ><!-- test-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/splide.min.css" rel="stylesheet">
 </head>
 <body id="top">
     <div id="wrops">
@@ -42,20 +43,20 @@
         <header id="colmar">
             <div id="head-box">
                 <h2>Cabinet de Colmar</h2>
-                <h1 class="text-uppercase"><strong>Annabel Begaud-haeffelin</strong></h1>
-                <h1>Osteopathe D.O.</h1>
-                <h3 class="h3Head">Pôle médical Louise JORDAN</h3>
-                <h3 class="h3Head">3 rue Herzog 68124 Logelbach-Wintzenheim</h2>
-                <h3>06.07.07.17.78</h3>
+                <p class="text-uppercase"><strong>Annabel Begaud-haeffelin</strong></p>
+                <p>Osteopathe D.O.</p>
+                <p>Pôle médical Louise JORDAN</p>
+                <p >3 rue Herzog 68124 Logelbach-Wintzenheim</p>
+                <p class="extra-margin">06.07.07.17.78</p>
                 <hr>
-                <h3>Sur rendez-vous et à domicile</h3>
+                <p>Sur rendez-vous et à domicile</p>
             </div>
         </header>
         <section id="propos">
             <div id="propos-box">
-                <h1 class="text-uppercase noirBleu">A qui sont adressées les séances d'ostéopathie?</h1>
+                <h2 class="text-uppercase noirBleu">A qui sont adressées les séances d'ostéopathie?</h2>
                 <hr class="white">
-                <h2>Les séances d'ostéopathie s'adressent à tout le monde aussi bien:</h2>
+                <h3>Les séances d'ostéopathie s'adressent à tout le monde aussi bien:</h3>
                 <div class="liste-propos"><ul>
                         <li>Aux <strong>nourrissons</strong> qui peuvent souffrir de plagiocéphalie (une déformation du crâne), de coliques, de régurgitations, de nervosité, de difficulté à tourner la tête, d'affection ORL, de difficulté à téter.</li>
                         <li>Aux <strong>enfants</strong> et aux <strong>adolescents</strong> qui peuvent souffrir suite à un traumatisme sportif, d'un trouble de la croissance, d'un trouble ORL ou digestif, du stress, de troubles de l’apprentissage, d'hyperactivité.</li>
@@ -73,18 +74,32 @@
         </section>
         <section id="portfolio">
             <h2 style="display:none">Image du cabinet</h2>
-            <div>
+                <div class="splide">
+            <!--<img id="diapo" src="img/colmar/cabinet1.webp" alt="Photo du cabinet d'osteopathie">
                 <span id="previous"><i class="fas fa-angle-double-left"></i></span>
-                <span id="next"><i class="fas fa-angle-double-right"></i></span>
-            </div>
-            <img id="diapo" src="img/colmar/cabinet1.jpg" alt="Photo du cabinet d'osteopathie">
+                <span id="next"><i class="fas fa-angle-double-right"></i></span>-->
+                    <div class="splide__track">
+                        <ul class ="splide__list">
+                            <li class="splide__slide"><img id="diapo" src="img/colmar/cabinet1.webp" alt="Photo du cabinet d'osteopathie"></li>
+                            <li class="splide__slide"><img id="diapo" src="img/colmar/cabinet2.webp" alt="Photo du cabinet d'osteopathie"></li>
+                            <li class="splide__slide"><img id="diapo" src="img/colmar/cabinet3.webp" alt="Photo du cabinet d'osteopathie"></li>
+                            <li class="splide__slide"><img id="diapo" src="img/colmar/cabinet4.webp" alt="Photo du cabinet d'osteopathie"></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="splide__progress">
+                        <div class="splide__progress__bar">
+                        </div>
+                    </div>
+                </div>
+            
             
         </section>
         <section id="motif">
             <div id="motif-box">
-                <h1 class="text-uppercase">Les motifs de consultations</h1>
+                <h2 class="text-uppercase">Les motifs de consultations</h2>
                 <hr>
-                <h2>Ils peuvent donc être multiples et toucher tous les grands systèmes du corps humain</h2>
+                <h3>Ils peuvent donc être multiples et toucher tous les grands systèmes du corps humain</h3>
                 <div id="liste-motif"><ul>
                     <li>Le <span class="orange gras">système locomoteur </span>(os, tendons, muscles) : cervicalgies, dorsalgies, lombalgies, de tendinites, séquelles de fractures, d’entorses, de douleurs articulaires dans les membres, d'une scoliose.</li>
                     <li>Le <span class="orange gras">système nerveux</span> : migraines, céphalées, sciatiques, cruralgies, névralgies cervico-brachiales, névralgies d’Arnold.</li>
@@ -97,7 +112,7 @@
         </section>
         <section id="deroul">
             <div id="deroul-box">
-                <h1 class="text-uppercase noirBleu">Déroulement d'une séance d'ostéopathie</h1>
+                <h2 class="text-uppercase noirBleu">Déroulement d'une séance d'ostéopathie</h2>
                 <hr class="white">
                 <div id="liste-deroul">
                     <div class="rowrow">
@@ -109,34 +124,34 @@
                                 Cet entretien permet également de réorienter le patient, 
                                 si son motif de consultation n’est pas du ressort de l’ostéopathie mais plutôt d’un traitement médical.</p>
                         </div>
-                        <img src="img/placeholder.jpg" alt="Placeholder">
+                        <img src="img/placeholder.webp" alt="Placeholder">
                     </div>
                     <div class="rowrow2">
                         <div class="colcol">
                             <h3><span>2</span>Les tests</h3> 
                             <p>Le second moment de la consultation sera  composé de tests ostéopathiques, afin de noter des zones avec des pertes de mobilités.</p>
-                        </div><img src="img/placeholder2.jpg" alt="Placeholder">
+                        </div><img src="img/placeholder2.webp" alt="Placeholder">
                     </div>
                     <div class="rowrow">
                         <div class="colcol">
                             <h3><span>3</span>Le traitement</h3> 
                             <p>Je vais alors mettre en place le traitement le plus adapté à vous en utilisant des techniques variées : douces/fasciale, viscérales, crâniennes, structurelles/manipulations. L’objectif est de redonner une amplitude de mouvement à l’articulation.<br>Toutes les structures du corps étant reliées les unes aux autres, au cours du traitement il se peut que je travaille sur des zones non douloureuses ou à distance de votre motif de consultation.</p>
                         </div>
-                        <img src="img/placeholder3.jpg" alt="Placeholder">
+                        <img src="img/placeholder3.webp" alt="Placeholder">
                     </div> 
                     <div class="rowrow2">
                         <div class="colcol">
                             <h3><span>4</span>La fin de la séance</h3> 
                             <p>En fin de séance, je prendrai le temps de revenir sur le traitement effectué, dans le but d’une meilleure compréhension de la symptomatologie. Mais également je vous donnerai des exercices et/ou des conseils afin de tirer le maximum de bénéfice de votre séance.</p>
                         </div>
-                        <img src="img/placeholder4.jpg" alt="Placeholder">
+                        <img src="img/placeholder4.webp" alt="Placeholder">
                     </div>
                     <div class="rowrow">
                         <div class="colcol">
                             <h3><span>5</span>Post consultation</h3> 
                             <p>Il est possible qu’après la séance, vous vous sentiez fatigué, que votre douleur persiste encore quelques jours voir que la douleur augmente. Il arrive même que de nouvelles douleurs apparaissent après le traitement. <br>Ces douleurs sont dues à la rééquilibration du corps, elles disparaitront quelques jours après la consultation. Pour tout renseignement à la suite d’un traitement, je me tiens toujours à votre disposition afin de discuter avec vous si les douleurs persistent.</p>
                         </div>
-                        <img src="img/placeholder5.jpg" alt="Placeholder">
+                        <img src="img/placeholder5.webp" alt="Placeholder">
                     </div>
                     <p id="pend">Il est possible que pour certains motifs de consultation, de type chroniques ou anciens, il faille plusieurs séances. En effet, il est difficile de régler une symptomatologie vieille de plusieurs mois ou de plusieurs années en une seule séance.</p>
                 </div>
@@ -144,21 +159,21 @@
         </section>
         <section id="osteo">
             <div id="osteo-box">
-                <h1 class="text-uppercase">Présentation de l'ostéopathe</h1>
+                <h2 class="text-uppercase">Présentation de l'ostéopathe</h2>
                 <hr class="orange">
-                <h2>Annabel Begaud-Haeffelin</h2>
+                <h3>Annabel Begaud-Haeffelin</h3>
                 <div>
                     <p>J’ai suivi une formation en <strong >cinq ans</strong> à temps plein au <strong>collège d’ostéopathie de Strasbourg</strong>. <br>
                         Le Titre <strong>Ostéopathe D.O.</strong> signifie que je suis <strong>diplômée</strong> d’une école agrée par le <strong>Ministère de la Santé</strong>.</p>
-                    <img src="img/test-anna.jpg" alt="">
+                    <img src="img/test-anna.webp" alt="">
                 </div>
             </div>
         </section>
         <section id="location">
             <div id="location-box">
-                <h1 class="text-uppercase noirBleu">Adresse du cabinet</h1>
+                <h2 class="text-uppercase noirBleu">Adresse du cabinet</h2>
                 <hr class="white">
-                <h2 class="noirBleu">Pôle médical Louise JORDAN <br> 3 rue Herzog 68124 Logelbach-Wintzenheim </h2>  
+                <h3 class="noirBleu">Pôle médical Louise JORDAN <br> 3 rue Herzog 68124 Logelbach-Wintzenheim </h3>  
                 <div>
                     <div class="flexRow">
                         <div class="gras noirBleu">
@@ -178,14 +193,14 @@
                             <span>Accessible aux personnes à mobilité réduite.</span>
                         </div>
                     </div>
-                    <a href="https://www.google.com/maps/place/3+Rue+Herzog+Logelbach,+68124+Wintzenheim" target="_blank"><img src="img/map.jpg" alt="Emplacement du cabinet"></a>
+                    <a href="https://www.google.com/maps/place/3+Rue+Herzog+Logelbach,+68124+Wintzenheim" target="_blank"><img src="img/map.webp" alt="Emplacement du cabinet"></a>
                 </div>
             </div>
         </section>
         <section id="contact">
-            <h1>Pour la prise de rendez-vous ou de renseignements</h1>
+            <h2>Pour la prise de rendez-vous ou de renseignements</h2>
             <hr>
-            <h2><strong>Du lundi au vendredi de 8h à 20h et le samedi de 8h à 12h</strong></h2>
+            <h3><strong>Du lundi au vendredi de 8h à 20h et le samedi de 8h à 12h</strong></h3>
             <div id="contact-box">
                 <div class="contact-icon">
                     <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
@@ -267,7 +282,9 @@
                 <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
             </div>
         </footer>
-        <script src="script.js"></script>
+        
+        <script src="js/splide.min.js"></script>
+        <script src="js/script.js"></script>
     </div>
 </body>
 </html>

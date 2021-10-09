@@ -1,3 +1,5 @@
+
+
 var legalc = document.getElementById("legal-clic");
 var legal = document.getElementById("infos-legal");
 var closelegal = document.getElementById("close-legal");
@@ -8,6 +10,24 @@ var lieu = document.getElementById("head-box").parentNode.id;
 var next = document.getElementById("next");
 var prev = document.getElementById("previous");
 var count = 1;
+
+
+var splide = new Splide( '.splide', {
+    type   : 'loop',
+    speed:  800,
+    height: "700px",
+    autoplay: true,
+    interval: 5000,
+    resetProgress: false,
+    pauseOnHover: boolean = false,
+    cover: true,
+} );
+
+splide.on( 'autoplay:playing', function ( rate ) {
+  console.log( rate ); // 0-1
+} );
+
+splide.mount();
 
 legalc.addEventListener("click",function() {
 
@@ -32,8 +52,8 @@ window.addEventListener("resize",function(){
         burgernav.classList.value="mainBurger hiddenBurger";
 });
 
-next.addEventListener("click",function(){diapo(1)});
-prev.addEventListener("click",function(){diapo(-1)});
+/*next.addEventListener("click",function(){diapo(1)});
+prev.addEventListener("click",function(){diapo(-1)});*/
 
 function diapo(n)
 {
@@ -45,3 +65,6 @@ function diapo(n)
             count=4;
         images.src = "img/"+lieu+"/cabinet"+count+".jpg";
 }
+
+
+

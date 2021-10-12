@@ -63,6 +63,10 @@ h3{
 h2.text-uppercase{
     margin-bottom: 0;
 }
+ul
+{
+    padding-left: 1em;
+}
 /* 
 ///////////////////
 NAVIGATION BAR 
@@ -374,7 +378,7 @@ MOTIF
     display: flex;
     flex-flow: column wrap;
     text-align: center;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding-bottom: 5em;
     padding-top: 5em;
@@ -397,10 +401,13 @@ MOTIF
 DEROULEMENT
 ///////////////////
 */
-#deroul-box
+#deroul
 {
     background-color: var(--bleu);
     color: white;
+}
+#deroul-box
+{
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -475,6 +482,11 @@ DEROULEMENT
     filter:grayscale(100%);
 }
 @media all and (max-width: 950px){
+    #deroul-box
+    {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
     #deroul-box #liste-deroul
     {
         max-width:450px;
@@ -486,6 +498,11 @@ DEROULEMENT
     }
 }
 @media all and (max-width: 450px){
+    #deroul-box
+    {
+        width:90%;
+        margin: auto;
+    }
     #deroul-box #liste-deroul
     {
         width: 100%;
@@ -545,7 +562,7 @@ OSTEO
 {
     width: 20%;
     filter:grayscale(100%);
-
+    min-width: 300px;
 }
 #osteo-box div p
 {
@@ -553,6 +570,21 @@ OSTEO
     margin-top: auto;
     margin-bottom: auto;
     text-align: justify;
+}
+@media all and (max-width: 768px){
+    #osteo-box div img
+    {
+        width: 50%;   
+    }
+    #osteo-box div p
+    {
+        width: 100%;
+    }
+    #osteo-box
+    {
+        padding-top:3em;
+        padding-bottom: 3em;
+    }
 }
 
 /* 
@@ -592,16 +624,43 @@ LOCATION
 #location-box span.gras
 {
     margin-right: 5em;
+    position: relative;
+}
+#location-box td:not(#location-box td.gras)
+{
+    color:white;
+    font-weight: normal;
+    padding-left: 2em;
+}
+#location-box table
+{
+    margin-bottom: 2em;
+}
+#location-box td
+{
+    padding-bottom: 1em;
 }
 .flexRow
 {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     margin-bottom: 2em;
 }
 .flexRow .gras
 {
     padding-right: 2em;
+}
+@media all and (max-width:450px)
+{
+    #location-box
+    {
+        width:90%;
+    }
+    #location
+    {
+        padding-top:3em;
+        padding-bottom: 3em;
+    }
 }
 /* 
 ///////////////////
@@ -639,6 +698,11 @@ CONTACT
     text-decoration: underline;
 }
 @media all and (max-width: 650px){
+    #contact
+    {
+        padding-bottom: 3em;
+        padding-top: 3em;
+    }
     #contact-box{
         margin: auto;
         width: 80%;

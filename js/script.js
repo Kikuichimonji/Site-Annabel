@@ -24,7 +24,7 @@ var splide = new Splide( '.splide', {
 } );
 
 splide.on( 'autoplay:playing', function ( rate ) {
-  console.log( rate ); // 0-1
+
 } );
 
 splide.mount();
@@ -52,8 +52,7 @@ window.addEventListener("resize",function(){
         burgernav.classList.value="mainBurger hiddenBurger";
 });
 
-/*next.addEventListener("click",function(){diapo(1)});
-prev.addEventListener("click",function(){diapo(-1)});*/
+
 
 function diapo(n)
 {

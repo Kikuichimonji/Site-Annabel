@@ -236,10 +236,6 @@ header#colmar
 {
     background-image: url("/img/header1.webp");
 }
-header#kunheim
-{
-    background-image: url("img/header.jpg");
-}
 #head-box{
     margin: auto;
     text-align: center;
